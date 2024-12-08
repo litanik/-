@@ -72,7 +72,7 @@ class Figure:
     Метод __len__ должен возвращать периметр фигуры.
     """
     def __len__(self):
-        return self.side * self.sides_count
+        return sum(self.__sides)
 
     """
     Метод set_sides(self, *new_sides) должен принимать новые стороны, если их количество не равно sides_count,
@@ -155,7 +155,9 @@ class Cube(Figure):
         return self.side ** 3
 
 # Вывод на консоль:
-circle1 = Circle((200, 200, 100), 10) # (Цвет, стороны)
+
+
+circle1 = Circle((200, 200, 100), 10)  # (Цвет, стороны)
 cube1 = Cube((222, 35, 130), 6)
 triangle1 = Triangle((200, 200, 100), 10, 6)
 
